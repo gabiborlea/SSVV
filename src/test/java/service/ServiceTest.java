@@ -17,17 +17,17 @@ public class ServiceTest {
     private static final Validator<Tema> temaValidator = new TemaValidator();
     private static final Validator<Nota> notaValidator = new NotaValidator();
 
-    StudentXMLRepository studentRepository;
-    TemaXMLRepository temaRepository;
-    NotaXMLRepository notaRepository;
+    StudentRepository studentRepository;
+    TemaRepository temaRepository;
+    NotaRepository notaRepository;
 
     private Service service;
 
     @BeforeEach
     public void init(){
-        this.studentRepository = new StudentXMLRepository(studentValidator, "src/main/resources/studentiTest.txt");
-        this.temaRepository = new TemaXMLRepository(temaValidator, "src/main/resources/temeTest.txt");
-        this.notaRepository = new NotaXMLRepository(notaValidator, "src/main/resources/notaTest.txt");
+        this.studentRepository = new StudentRepository(studentValidator);
+        this.temaRepository = new TemaRepository(temaValidator);
+        this.notaRepository = new NotaRepository(notaValidator);
         this.service = new Service(studentRepository, temaRepository, notaRepository);
     }
 
@@ -111,7 +111,7 @@ public class ServiceTest {
         int group1 = 111;
         int group2 = 931;
         int expected1 = 0;
-        int expected2 = 0;
+        int expected2 = 1;
 
         int actual1 = this.service.saveStudent(id, name1, group1);
         int actual2 = this.service.saveStudent(id, name2, group2);
