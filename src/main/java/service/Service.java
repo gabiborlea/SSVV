@@ -39,7 +39,7 @@ public class Service {
 
     public int saveTema(String id, String descriere, int deadline, int startline) {
         Tema tema = new Tema(id, descriere, deadline, startline);
-        Tema result = (Tema) temaRepo.save(tema);
+        Tema result = temaRepo.save(tema);
 
         if (result == null) {
             return 1;
