@@ -43,108 +43,108 @@ public class ServiceTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    public void testSaveStudent_TC2(){
-        String id = null;
-        String name = "Ewald";
-        int group = 111;
-        int expected  = 1;
-
-        int actual = this.service.saveStudent(id, name, group);
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testSaveStudent_TC3(){
-        String id = "1";
-        String name = "";
-        int group = 111;
-        int expected  = 1;
-
-        int actual = this.service.saveStudent(id, name, group);
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testSaveStudent_TC4(){
-        String id = "1";
-        String name = null;
-        int group = 111;
-        int expected  = 1;
-
-        int actual = this.service.saveStudent(id, name, group);
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testSaveStudent_TC5(){
-        String id = "1";
-        String name = "Ewald";
-        int group = 109;
-        int expected  = 1;
-
-        int actual = this.service.saveStudent(id, name, group);
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testSaveStudent_TC6(){
-        String id = "1";
-        String name = "Ewald";
-        int group = 939;
-        int expected  = 1;
-
-        int actual = this.service.saveStudent(id, name, group);
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testSaveStudent_TC7(){
-        String id = "1";
-        String name1 = "Ewald";
-        String name2 = "Gabriel";
-        int group1 = 111;
-        int group2 = 931;
-        int expected1 = 0;
-        int expected2 = 1;
-
-        int actual1 = this.service.saveStudent(id, name1, group1);
-        int actual2 = this.service.saveStudent(id, name2, group2);
-
-        Assertions.assertEquals(expected1, actual1);
-        Assertions.assertEquals(expected2, actual2);
-    }
-
-    @Test
-    public void testSaveStudent_TC8(){
-        String id = "1";
-        String name = "Ewald";
-        int group = 111;
-        int expected = 0;
-
-        int actual = this.service.saveStudent(id, name, group);
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-
-    @Test
-    public void testSaveStudent_TC9(){
-        String id = "1";
-        String name = "Ewald";
-        int group = 931;
-        int expected = 0;
-
-        int actual = this.service.saveStudent(id, name, group);
-
-        Assertions.assertEquals(expected, actual);
-    }
-
+//    @Test
+//    public void testSaveStudent_TC2(){
+//        String id = null;
+//        String name = "Ewald";
+//        int group = 111;
+//        int expected  = 1;
+//
+//        int actual = this.service.saveStudent(id, name, group);
+//
+//        Assertions.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void testSaveStudent_TC3(){
+//        String id = "1";
+//        String name = "";
+//        int group = 111;
+//        int expected  = 1;
+//
+//        int actual = this.service.saveStudent(id, name, group);
+//
+//        Assertions.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void testSaveStudent_TC4(){
+//        String id = "1";
+//        String name = null;
+//        int group = 111;
+//        int expected  = 1;
+//
+//        int actual = this.service.saveStudent(id, name, group);
+//
+//        Assertions.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void testSaveStudent_TC5(){
+//        String id = "1";
+//        String name = "Ewald";
+//        int group = 109;
+//        int expected  = 1;
+//
+//        int actual = this.service.saveStudent(id, name, group);
+//
+//        Assertions.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void testSaveStudent_TC6(){
+//        String id = "1";
+//        String name = "Ewald";
+//        int group = 939;
+//        int expected  = 1;
+//
+//        int actual = this.service.saveStudent(id, name, group);
+//
+//        Assertions.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void testSaveStudent_TC7(){
+//        String id = "1";
+//        String name1 = "Ewald";
+//        String name2 = "Gabriel";
+//        int group1 = 111;
+//        int group2 = 931;
+//        int expected1 = 0;
+//        int expected2 = 1;
+//
+//        int actual1 = this.service.saveStudent(id, name1, group1);
+//        int actual2 = this.service.saveStudent(id, name2, group2);
+//
+//        Assertions.assertEquals(expected1, actual1);
+//        Assertions.assertEquals(expected2, actual2);
+//    }
+//
+//    @Test
+//    public void testSaveStudent_TC8(){
+//        String id = "1";
+//        String name = "Ewald";
+//        int group = 111;
+//        int expected = 0;
+//
+//        int actual = this.service.saveStudent(id, name, group);
+//
+//        Assertions.assertEquals(expected, actual);
+//    }
+//
+//
+//    @Test
+//    public void testSaveStudent_TC9(){
+//        String id = "1";
+//        String name = "Ewald";
+//        int group = 931;
+//        int expected = 0;
+//
+//        int actual = this.service.saveStudent(id, name, group);
+//
+//        Assertions.assertEquals(expected, actual);
+//    }
+//
 
 
 
