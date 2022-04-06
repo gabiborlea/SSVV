@@ -114,7 +114,7 @@ public class ServiceTest {
         int expected2 = 1;
 
         int actual1 = this.service.saveStudent(id, name1, group1);
-        int actual2 = this.service.saveStudent(id, name2, group2);
+        int actual2 = this.service.saveStudent(id, name2, group2);  // asdasd
 
         Assertions.assertEquals(expected1, actual1);
         Assertions.assertEquals(expected2, actual2);
