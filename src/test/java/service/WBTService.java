@@ -40,53 +40,59 @@ public class WBTService {
     }
 
     @Test
-    void addTema_emptyId_ValidationException() {
+    void testSaveTema_TC1() {
         Assertions.assertEquals(1, service.saveTema("","desc", 1, 1));
     }
 
     @Test
-    void addTema_nullId_ValidationException() {
+    void testSaveTema_TC2() {
         Assertions.assertEquals(1, service.saveTema(null, "desc", 1, 1));
     }
 
     @Test
-    void addTema_emptyDescription_ValidationException() {
+    void testSaveTema_TC3() {
         Assertions.assertEquals(1, service.saveTema("id", "", 1, 1));
     }
 
     @Test
-    void addTema_nullDescription_ValidationException() {
+    void testSaveTema_TC4() {
         Assertions.assertEquals(1, service.saveTema("id", null, 1, 1));
     }
 
     @Test
-    void addTema_deadlineLessThan1_ValidationException() {
+    void testSaveTema_TC5() {
         Assertions.assertEquals(1, service.saveTema("id", "desc", 0, 1));
     }
 
     @Test
-    void addTema_deadlineGreaterThan14_ValidationException() {
+    void testSaveTema_TC6() {
         Assertions.assertEquals(1, service.saveTema("id", "desc", 15, 1));
     }
 
     @Test
-    void addTema_primireLessThan1_ValidationException() {
+    void testSaveTema_TC7() {
         Assertions.assertEquals(1, service.saveTema("id", "desc", 1, 0));
     }
 
     @Test
-    void addTema_primireGreaterThan14_ValidationException() {
+    void testSaveTema_TC8() {
         Assertions.assertEquals(1, service.saveTema("id", "desc", 1, 15));
     }
 
-    // @Test
-    // void addTema_existingAssignment_ExistingAssignment() {
-    //     Tema assignment = new Tema("1", "desc", 1, 1);
-    //     Assertions.assertEquals(assignment,service.saveTema("1", "desc", 1, 1));
-    // }
+     @Test
+     void testSaveTema_TC9() {
+         service.saveTema("1", "desc", 1, 1);
+         Assertions.assertEquals(1,service.saveTema("1", "desc", 1, 1));
+     }
 
     @Test
-    void addTema_correctAssignment_Null() {
+    void testSaveTema_TC10() {
+        service.saveTema("1", "desc", 1, 1);
+        Assertions.assertEquals(1,service.saveTema("1", "desc", 1, 10));
+    }
+
+    @Test
+    void testSaveTema_TC11() {
         Assertions.assertEquals(0, service.saveTema("1", "desc", 12, 2));
     }
 }
