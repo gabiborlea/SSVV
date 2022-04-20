@@ -36,64 +36,52 @@ public class TopDownService {
 
     @Test
     public void testSaveStudent() {
-        // saveStudent
-        //Arrange
         String id = "5";
-        String name = "Andrei";
+        String name = "Ewald";
         int group = 111;
 
-        //Act
         int actual = service.saveStudent(id, name, group);
 
-        //Assert
         Assertions.assertEquals(0, actual);
     }
 
     @Test
     public void testSaveTema() {
-        // saveStudent + saveTema
-        //Arrange
         String idStudent = "5";
-        String name = "Andrei";
+        String name = "Ewald";
         int group = 111;
 
         String idTema = "1";
-        String description = "some desc";
+        String description = "sasdasdasd";
         int deadline = 1;
         int startline = 1;
 
-        //Act
         int resStudent = service.saveStudent(idStudent, name, group);
         int resAssignemnt = service.saveTema(idTema, description, deadline, startline);
 
-        // Assert
         Assertions.assertEquals(0, resStudent);
         Assertions.assertEquals(0, resAssignemnt);
     }
 
     @Test
     public void testSaveNota(){
-        // saveStudent + saveTema + saveNota
-        //Arrange
         String idStudent = "5";
-        String name = "Andrei";
+        String name = "Ewald";
         int group = 111;
 
         String idTema = "1";
-        String description = "some desc";
+        String description = "sasdasdasd";
         int deadline = 1;
         int startline = 1;
 
         int valNota = 10;
         int predata = 7;
-        String feedback = "Ok";
+        String feedback = "naspa man";
 
-        //Act
         int resStudent = service.saveStudent(idStudent, name, group);
         int resAssignemnt = service.saveTema(idTema, description, deadline, startline);
         int resNota = service.saveNota(idStudent, idTema, valNota, predata, feedback);
 
-        //Assert
         Assertions.assertEquals(0, resStudent);
         Assertions.assertEquals(0, resAssignemnt);
         Assertions.assertEquals(0, resNota);
