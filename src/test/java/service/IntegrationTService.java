@@ -16,7 +16,7 @@ import validation.Validator;
 
 import java.io.IOException;
 
-public class InterationTService {
+public class IntegrationTService {
 
     private static final Validator<Student> studentValidator = new StudentValidator();
     private static final Validator<Tema> temaValidator = new TemaValidator();
